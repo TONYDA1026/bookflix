@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+
+  <h2>Checkout</h2>
+
+  <div id="orderSummary">
+    <h3>Your Order Summary</h3>
+    <p>Movie Quantity Price</p>
+    <p>Total: 0.00</p>
+  </div>
+
+  <form id="checkoutForm">
+    <h3>Personal Information</h3>
+    <div class="personal-info">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="text" id="phone" required>
+    </div>
+
+    <h3>Seat Preferences</h3>
+    <label for="seatPref">Preferred Seat:</label>
+    <select id="seatPref">
+      <option>Any Available</option>
+      <option>Front Row</option>
+      <option>Middle Row</option>
+      <option>Back Row</option>
+    </select>
+
+    <h3>Payment Information</h3>
+    <label for="card">Card Number:</label>
+    <input type="text" id="card" required pattern="\d{16}" title="Enter 16-digit card number">
+
+    <label for="expiry">Expiry Date:</label>
+    <input type="month" id="expiry" required>
+
+    <label for="cvv">CVV:</label>
+    <input type="text" id="cvv" required pattern="\d{3}" title="Enter 3-digit CVV">
+
+    <button type="submit">Pay</button>
+  </form>
+
+  <div id="confirmation"></div>
+
+  <script src="checkout.js"></script>
+</body>
+</html>

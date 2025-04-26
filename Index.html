@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BookFlix</title>
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+
+  <h1>BookFlix </h1>
+
+  <header>
+    <nav class="top-nav">
+      <ul>
+        <li><button onclick="toggleCategory('nowShowing')"> Now Showing</button></li>
+        <li><button onclick="toggleCategory('upcomingMovies')"> Upcoming Movies</button></li>
+        <li><button onclick="toggleCategory('premiumScreenings')"> Premium Screenings</button></li>
+        <li><button onclick="toggleCategory('imaxShows')"> 3D & IMAX Shows</button></li>
+        <li><button onclick="toggleCategory('specialOffers')"> Special Discount Offers</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="nowShowing" class="dropdown-container">
+    <h2>Now Showing</h2>
+    <div class="movie-grid">
+      <div class="movie-card">
+        <img src="/image/dune.jpg" alt="Dune: Part Two">
+        <h3>Dune: Part Two</h3>
+      </div>
+      <div class="movie-card">
+        <img src="/image/batman.jpg" alt="The Batman">
+        <h3>The Batman</h3>
+      </div>
+      <div class="movie-card">
+        <img src="/image/barbie.jpg" alt="Barbie">
+        <h3>Barbie</h3>
+      </div>
+      <div class="movie-card">
+        <img src="/image/avatar.jpg" alt="Avatar: The Way of Water">
+        <h3>Avatar: The Way of Water</h3>
+      </div>
+      <div class="movie-card">
+        <img src="/image/john.jpg" alt="John Wick: Chapter4">
+        <h3>John Wick: Chapter4</h3>
+      </div>
+      <div class="movie-card">
+        <img src="/image/guardian.jpg" alt="Guardians of the Galaxy Vol. 3">
+        <h3>Guardians of the Galaxy Vol. 3</h3>
+      </div>
+    </div>
+  </div>
+
+  <div id="upcomingMovies" class="dropdown-container">
+    <h2>Upcoming Movies</h2>
+    <div class="movie-grid">
+      <div class="movie-card">
+        <img src="/image/top.jpg" alt="Top Gun: Maverick">
+        <h3>Top Gun: Maverick</h3>
+      </div>
+      <div class="movie-card">
+        <img src="/image/oppe.jpg" alt="Oppenheimer">
+        <h3>Oppenheimer</h3>
+      </div>
+      <div class="movie-card">
+        <img src="/image/magic.jpg" alt="The Magic Carousel">
+        <h3>The Magic Carousel</h3>
+      </div>
+      <div class="movie-card">
+        <img src="/image/deadpool.jpg" alt="Deadpool 3">
+        <h3>Deadpool 3</h3>
+      </div>
+      <div class="movie-card">
+        <img src="/image/inside.jpg" alt="Inside Out 2">
+        <h3>Inside Out 2</h3>
+      </div>
+      <div class="movie-card">
+        <img src="/image/wonka.jpg" alt="Wonka">
+        <h3>Wonka</h3>
+      </div>
+    </div>
+  </div>
+  
+
+  <div id="premiumScreening" class="dropdown-container">
+    <h2>Premium Screening</h2>
+    <div class="movie-grid">
+      <div class="movie-card">
+        <img src="/image/batman.jpg" alt="The Batman">
+        <h3>The Batman</h3>
+      </div>
+      <div class="movie-card">
+        <img src="/image/avatar.jpg" alt="Avatar: The Way of Water">
+        <h3>Avatar: The Way of Water</h3>
+      </div>
+      <div class="movie-card">
+        <img src="/image/oppe.jpg" alt="Oppenheimer">
+        <h3>Oppenheimer</h3>
+      </div>
+      <div class="movie-card">
+        <img src="/image/john.jpg" alt="John Wick: Chapter 4">
+        <h3>John Wick: Chapter 4</h3>
+      </div>
+    </div>
+  </div>
+  
+
+  <div id="imaxScreening" class="dropdown-container">
+    <h2>IMAX</h2>
+    <div class="movie-grid">
+      <div class="movie-card">
+        <img src="/image/inter.jpg" alt="Interstellar">
+        <h3>Interstellar</h3>
+      </div>
+      <div class="movie-card">
+        <img src="/image/mission.jpg" alt="Mission: Impossible – Dead Reckoning">
+        <h3>Mission: Impossible – Dead Reckoning</h3>
+      </div>
+      <div class="movie-card">
+        <img src="/image/top.jpg" alt="Top Gun: Maverick">
+        <h3>Top Gun: Maverick</h3>
+      </div>
+      <div class="movie-card">
+        <img src="/image/aven.jpg" alt="Avengers: Endgame">
+        <h3>Avengers: Endgame</h3>
+      </div>
+    </div>
+  </div>
+  
+
+  <div id="specialOffers" class="dropdown-container">
+    <h2>Special Discount Offers</h2>
+    <ul>
+      <li><strong>Student Discount:</strong> 20% off with valid student ID.</li>
+      <li><strong>Early Bird Offer:</strong> Book before 12 PM and get 15% off.</li>
+      <li><strong>Weekend Combo:</strong> Buy 2 tickets and get 1 free popcorn combo.</li>
+    </ul>
+  </div>
+
+  <section id="booking-form">
+    <h2>Book Your Tickets</h2>
+    <form id="ticketForm">
+      <label for="movie">Select Movie:</label>
+      <select id="movie" name="movie"></select>
+
+      <label for="seats">Number of Seats:</label>
+      <input type="number" id="seats" name="seats" min="1" />
+
+      <button type="button" onclick="addTicket()">Add Ticket</button>
+      <button type="button" onclick="saveFavourite()">Save as Favourite</button>
+      <button type="button" onclick="applyFavourite()">Apply Favourite</button>
+    </form>
+
+    <h3>Selected Tickets</h3>
+    <table id="ticketTable">
+      <thead>
+        <tr>
+          <th>Movie</th>
+          <th>Seats</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">Total</td>
+          <td id="totalPrice">$0</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <button onclick="proceedToCheckout()" class="checkout-btn">Proceed to Checkout</button>
+  </section>
+
+  <script src="home.js"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+/* Reset */
+body, h1, h2, h3, p, label, input, select, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa; /* Light grey background */
+  color: #333; /* Dark text */
+  padding: 1.5rem;
+}
+
+/* Header */
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #000; /* Pure black heading */
+}
+
+/* Order Summary */
+#orderSummary {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  max-width: 450px;
+  margin: 0 auto 2rem auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+#orderSummary h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #28a745;
+}
+
+#orderSummary p {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+/* Form Styling */
+form {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 2rem;
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Form Headings */
+form h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: #000;
+}
+
+/* Personal Information smaller */
+.personal-info {
+  max-width: 85%;
+  margin: 0 auto 2rem auto;
+}
+
+/* Labels */
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+/* Inputs and Select */
+form input,
+form select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Button */
+form button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #28a745; /* Green button */
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+/* Confirmation Section */
+#confirmation {
+  display: none;
+  margin-top: 2rem;
+  background-color: #e6ffe6;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #b2dfdb;
+  box-shadow: 0 2px 8px rgba(0, 128, 0, 0.05);
+}
+
+#confirmation h3 {
+  color: #28a745;
+  margin-bottom: 1rem;
+}
+
+#confirmation p {
+  margin-bottom: 0.75rem;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  form {
+    padding: 1.5rem;
+  }
+
+  form h3 {
+    font-size: 1.2rem;
+  }
+
+  form input,
+  form select {
+    padding: 0.65rem;
+  }
+
+  form button {
+    font-size: 1rem;
+    padding: 0.65rem;
+  }
+
+  .personal-info {
+    max-width: 100%;
+  }
+
+  #orderSummary {
+    max-width: 90%;
+  }
+}
